@@ -405,7 +405,8 @@ describe('authentication plugin', () => {
       .createConnection({
         user: 'sha256User',
         password: 'password',
-        allowPublicKeyRetrieval: true
+        allowPublicKeyRetrieval: true,
+        debug: true
       })
       .then((conn) => {
         conn.end();
@@ -548,7 +549,8 @@ describe('authentication plugin', () => {
       const conn = await base.createConnection({
         user: 'cachingSha256User2',
         password: 'password',
-        allowPublicKeyRetrieval: true
+        allowPublicKeyRetrieval: true,
+        debug: true
       });
       conn.end();
     } catch (err) {
